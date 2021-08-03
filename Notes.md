@@ -139,7 +139,58 @@ p {
 
 
 
+# CSS
 
+## 1. CSS Position
+
+### Static
+
+相对位置流动，不会对top, buttom, left, right生效；
+
+### Absolute
+
+当前页面位置的绝对定位，不会跟随HTML排版的流动而移动，但如果页面有卷轴向下拉时将会随当前页面上移；
+
+如果将absolute元素加在absolute元素里面，则会根据第一层absolute的定位再改变相对位置;
+
+```css
+.absolute {
+  position: absolute;
+  right: 80px;
+  buttom: 60px;
+}
+
+
+//此时的inside div将会相对outside定位
+<div  class = "absolute"> outside 
+ 	<div class = "absolte"> inside < /div>
+</div>
+
+```
+
+
+
+### Relative
+
+与static相似，都会跟随HTML的排版流程移动；
+
+比static多了top, left, buttom等调整位置；
+
+relative内的absolute会根据relative定位；
+
+
+
+### Fixed
+
+与absolute相同，但页面卷动后也会保持在同样位置；
+
+即使放在relative里也不会随着relative定位；
+
+
+
+### Sticky
+
+会在卷动过程中上升到top设定的值后，会保持在设定的位置；
 
 
 

@@ -1,12 +1,60 @@
-p {
-    color: red;
-  }
+/* body{
+    background-color: chocolate;
+}
 
-h1 {
+.first-header {
+    text-align: center;
     font-size: 30px;  
-    color: darkslateblue; 
+    color: white ; 
     height: auto; 
     padding: 30px;
     position: relative;
-}  
+}
+ 
 
+.second-header {
+    text-align: center;
+    color: white ; 
+    height: auto; 
+    padding: 30px;
+    position: relative;
+}
+
+.todo-input {
+    margin:0 auto;
+    border:1px solid red;
+} */
+
+.outer {
+    width: 400px;
+    height: 300px;
+    background: black;
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .inner1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+  }
+  
+  .inner2 {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    position: relative;
+    left: 100px;
+  }
+  
+  .inner3 {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: inherit; /* absolute */
+    left: 50px;
+    top: 50px;
+    /* z-index: -1; */
+  }
