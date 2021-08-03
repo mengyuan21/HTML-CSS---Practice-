@@ -1,3 +1,12 @@
 p {
     color: red;
   }
+
+h1 {
+    font-size: 30px;  
+    color: darkslateblue; 
+    height: auto; 
+    padding: 30px;
+    position: relative;
+}  
+
