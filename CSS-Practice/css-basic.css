@@ -1,0 +1,60 @@
+/* 通用选择器 Universal selector  */
+*[lang^=en]{
+    color:green;
+}
+
+*[lang^=en]{color:green;}
+*.warning {color:red;}
+*#maincontent {border: 1px solid blue;}
+
+/* 元素选择器 */
+span {
+    background-color: DodgerBlue;
+    color: #ffffff;
+}
+
+p {
+    color: rgb(1, 15, 1);
+}
+
+
+/* 类选择器 */
+span.classy {
+    background-color: rgb(194, 21, 122);
+}
+
+/* ID选择器 */ 
+span#identified {
+    background-color: rgb(65, 11, 100);
+}
+
+/* 属性选择器 */
+a {
+    color: blue;
+ }
+  
+  /* 以 "#" 开头的页面本地链接 */
+  a[href^="#"] {
+    background-color: gold;
+  }
+  
+  /* 包含 "example" 的链接 */
+  a[href*="example"] {
+    background-color: silver;
+  }
+  
+  /* 包含 "insensitive" 的链接,不区分大小写 */
+  a[href*="insensitive" i] {
+    color: cyan;
+  }
+  
+  /* 包含 "cAsE" 的链接*/
+  a[href*="cAsE"] {
+    color: pink;
+  }
+  
+  /* 以 ".org" 结尾的链接 */
+  a[href$=".org"] {
+    color: red;
+  }
+
