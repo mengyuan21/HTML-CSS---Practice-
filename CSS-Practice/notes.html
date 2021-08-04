@@ -16,17 +16,36 @@
     <p> 4. 链接式 </p>
     <br />
     <h1> CSS 注意事项 </h1>
+    <br />
     <div>
-        <dt> 命名规则: </dt>
-        <dd> 1. 一律小写; </dd>
-        <dd> 2. 尽量用英文; </dd>
-        <dd> 3. 不加中槓和下划线; </dd>
-        <dd> 4. 尽量不缩写，除非一看就明白的单词。 </dd>
+        <dt> BEM命名规则: </dt>
+        <br />
+        <dd> 1. BEM : <br />Block: 模块; Element: 元素; Modifier: 修饰符;</dd>
+        <br />
+        <dd> 2. 链接符: <br />
+            - 中划线 ：仅作为连字符使用，表示某个块或者某个子元素的多单词之间的连接记号;<br />
+            __ 双下划线：双下划线用来连接块和块的子元素;<br />
+            _ 单下划线：单下划线用来描述一个块或者块的子元素的一种状态; <br />
+        </dd>
+        <br />
+        <dd> 3. Example:<br />
+            .block {} ： 代表了具体的组件<br />
+
+            .block__element {} ： 代表 .block 的后代，用于形成一个完整的 .block 的整体 <br />
+
+            .block--modifier {} ： 代表 .block 的不同状态或不同版本。 <br />
+        </dd>
+        <dd> 4. 好处: <br/>
+            BEM的关键是，可以获得更多的描述和更加清晰的结构，从其名字可以知道某个标记的含义。于是，通过查看 HTML 代码中的 class 属性，就能知道元素之间的关联。
+        </dd>
+        <br />
+        <br />
         <dt> 书写顺序: </dt>
         <dd> 1. 位置属性(position, top, right...); </dd>
         <dd> 2. 大小（width, height, paddong, margin...）; </dd>
         <dd> 3. 文字系列(font,line-height, letter-spacing, color-text-align...); </dd>
         <dd> 4. 背景(background, border...); </dd>
+        <br />
         <dt> 书写规范： </dt>
         <dd> 1. 使用CSS缩写属性，提高用户阅读体验; </dd>
         <dd> 2. 长名称或词组用中横线“-”，不建议使用“_”,以便区分JS变量名; </dd>
