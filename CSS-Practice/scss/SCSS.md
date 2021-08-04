@@ -34,11 +34,80 @@ Sass 允许您嵌套 CSS 选择器，嵌套方式 与 HTML 的视觉层次结构
 
 
 
-### 3. k
+```css
+/*使用父选择器*/
+article a {
+  color: blue;
+  &:hover { color: red }
+}
+
+/*当包含父选择器标识符的嵌套规则被打开时，它不会像后代选择器那样进行拼接，而是&被父选择器直接替换：*/
+
+article a { color: blue }
+article a:hover { color: red }
+```
 
 
 
-##  
+### 3. 导入SASS文件
+
+`@import`规则允许在一个`css`文件中导入其他`css`文件。然而，后果是只有执行到`@import`时，浏览器才会去下载其他`css`文件，这导致页面加载起来特别慢。
+
+`sass`也有一个`@import`规则，但不同的是，`sass`的`@import`规则在生成`css`文件时就把相关文件导入进来。这意味着所有相关的样式被归纳到了同一个`css`文件中，而无需发起额外的下载请求。
+
+import时可以省略文件名的“.scss” 或 “.sass” 后缀 , 如 colors.scss 写作： @import "colors"
+
+
+
+#### 局部文件的导入
+
+那些专门为`@import`命令而编写的`sass`文件，并不需要生成对应的独立`css`文件，这样的`sass`文件称为局部文件。
+
+**局部文件的命名**：下划线开头
+
+
+
+#### 默认变量值
+
+如果一个变量被多次声明，那么将只有最后一次声明有效
+
+
+
+#### 嵌套导入
+
+若有一文件名为“_blue-theme.scss”，内容为：
+
+```css
+aside {
+  background: blue;
+  color: white;
+}
+```
+
+name将它导入到css中：
+
+```css
+.blue-theme {@import "blue-theme"}
+```
+
+生成的结果将与如下文件相同：
+
+```css
+.blue-theme {
+  aside {
+    background: blue;
+    color: #fff;
+  }
+}
+```
+
+注：
+
+你不能用`sass`的`@import`直接导入一个原始的`css`文件，因为`sass`会认为你想用`css`原生的`@import`。但是，因为`sass`的语法完全兼容`css`，所以你可以把原始的`css`文件改名为`.scss`后缀，即可直接导入了。
+
+
+
+
 
 在CSS中，我们编写了如下所示的完整代码。
 

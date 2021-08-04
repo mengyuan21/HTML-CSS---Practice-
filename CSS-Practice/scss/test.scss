@@ -1,4 +1,4 @@
-//变量
+//变量，可在所有选择器中重复引用
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -8,20 +8,12 @@ body {
 }
 
 
-//嵌套
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+//嵌套,减少重复书写
+
+#content {
+    article {
+      h1 { color: #333 }
+      p { margin-bottom: 1.4em }
+    }
+    aside { background-color: #EEE }
   }
-
-  li { display: inline-block; }
-
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-  }
-}
-

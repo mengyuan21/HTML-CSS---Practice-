@@ -3,18 +3,14 @@ body {
   color: #333;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+#content article h1 {
+  color: #333;
 }
 
-nav li {
-  display: inline-block;
+#content article p {
+  margin-bottom: 1.4em;
 }
 
-nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none;
+#content aside {
+  background-color: #EEE;
 }
