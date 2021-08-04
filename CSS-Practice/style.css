@@ -1,60 +1,43 @@
-/* body{
+body{
     background-color: chocolate;
 }
 
-.first-header {
-    text-align: center;
-    font-size: 30px;  
-    color: white ; 
-    height: auto; 
-    padding: 30px;
-    position: relative;
-}
- 
 
-.second-header {
-    text-align: center;
-    color: white ; 
-    height: auto; 
-    padding: 30px;
-    position: relative;
+/* 三个div都是相对整个页面absolute的
+每个div内的小lable是relative的
+*/
+
+.header-text {
+    /* display:flex; */
+    justify-content:center;
+    position: absolute;
+    top: 200px;
+    left: 30%;
 }
 
-.todo-input {
-    margin:0 auto;
-    border:1px solid red;
-} */
+.input-text {
+    position: absolute;
+    top: 400px;
+    left: 45%;
+}
 
-.outer {
+.input-input {
+    height: 40px;
     width: 400px;
-    height: 300px;
-    background: black;
-    margin: auto;
-    position: absolute;
-    z-index: -1;
-  }
-  
-  .inner1 {
-    width: 100px;
-    height: 100px;
-    background: red;
-    position: absolute;
-  }
-  
-  .inner2 {
-    width: 100px;
-    height: 100px;
-    background: yellow;
     position: relative;
-    left: 100px;
-  }
-  
-  .inner3 {
-    width: 100px;
-    height: 100px;
-    background: blue;
-    position: inherit; /* absolute */
-    left: 50px;
-    top: 50px;
-    /* z-index: -1; */
-  }
+    right: 40%;
+}
+
+.input-button {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    right: 30%;
+}
+
+.list {
+    justify-content:center;
+    position: absolute;
+    top: 500px;
+    left: 40%;
+}
