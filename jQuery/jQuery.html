@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8" />
+    <title> jQuery </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="jQuery.js"></script>
+</head>
+
+<body>
+    <h1> 什么是jQquery </h1>
+    <span> jQuery 是一个轻量级的"写的少，做的多"的 JavaScript 库。 </span>
+    <span> jQuery 库包含以下功能：</span>
+    <ul>
+        <li>HTML 元素选取</li>
+        <li>HTML 元素操作</li>
+        <li>CSS 操作</li>
+        <li>HTML 事件函数</li>
+        <li>JavaScript 特效和动画</li>
+        <li>HTML DOM 遍历和修改</li>
+        <li>AJAX</li>
+        <li>Utilities</li>
+    </ul>
+    <br />
+    <h1> jQuery的使用 </h1>
+    <span>可以使用 HTML 的 script 标签引用它：</span>
+    <textarea id="story" name="story" rows="5" cols="33">
+        <head>
+        <script src="jquery"></script>
+        </head>
+    </textarea>
+    <h1> jQuery的语法 </h1>
+    <span> 选取HTML元素，并对选取的元素执行某些操作 </span>
+    <h3> 基础语法: $(selector).action </h3>
+    <ul>
+        <li> 美元符号 $ : 定义jQuery </li>
+        <li> 选择符(selector) : “查询”和查找HTML元素 </li>
+        <li> jQuery的action() : 执行对元素的操作 </li>
+    </ul>
+    <h3> 练习1 ：元素选择器 —— 通过jQuery隐藏所有p标签的内容 </h3>
+    <p> 这是一个段落 </p>
+    <p> 这是另一个段落 </p>
+    <button id="button1"> 点我！ </button>
+    <h3> 练习2 ： id选择器 —— 通过jQuery隐藏所有id = test的内容 </h3>
+    <p id="test"> 我的id = "test" </p>
+    <p> 我的id != "test" </p>
+    <button id="button2"> 点我！ </button>
+    <br />
+    <br />
+    <br />
+    <h2> 常用的jQuery事件方法 </h2>
+    <h3> $(document).ready() </h3>
+    <p> 该方法允许我们在文档完全加载完后执行函数 </p>
+    <br />
+    <h3> click() / dbclick() </h3>
+    <span> click() 方法是当按钮点击事件被触发时会调用一个函数，该函数在用户点击 HTML 元素时执行 </span>
+    <p> 用户点击后，该段落将会消失 </p>
+    <p> 点我消失！ </p>
+    <p> 点我也消失！ </p>
+    <br />
+    <h3> mouseenter() / mouseleave() / mousedown() </h3>
+    <p> 当鼠标指针穿过元素时，会发生 mouseenter 事件 </p>
+    <p id="p1">鼠标指针进入此处，会看到弹窗。</p>
+    <br />
+    <h3> hover() </h3>
+    <p> hover()方法用于模拟光标悬停事件 </p>
+    <p id="p2"> 这是测试hover的段落 </p>
+    <br />
+    <h3> focus() </h3>
+    <p> 当元素获得焦点时，发生 focus 事件。当通过鼠标点击选中元素或通过 tab 键定位到元素时，该元素就会获得焦点 </p>
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email"><br />
+    <br />
+    <h3> hide & show </h3>
+    <p>点击 “隐藏” 按钮我将会消失，点击 “显示” 我将重新出现</p>
+    <button id="hide">隐藏</button>
+    <button id="show">显示</button>
+    <br />
+    <br />
+    <h3> 获得内容 </h3>
+    <p>名称: <input type="text" id="show-input" value="李梦媛"></p>
+    <button id = "show-input-button">显示值</button>
+    <br />
+
+</body>
+
+</html>
