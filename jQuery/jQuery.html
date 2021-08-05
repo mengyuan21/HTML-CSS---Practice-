@@ -33,7 +33,7 @@
     </textarea>
     <h1> jQuery的语法 </h1>
     <span> 选取HTML元素，并对选取的元素执行某些操作 </span>
-    <h3> 基础语法: $(selector).action </h3>
+    <h2> 基础语法: $(selector).action </h2>
     <ul>
         <li> 美元符号 $ : 定义jQuery </li>
         <li> 选择符(selector) : “查询”和查找HTML元素 </li>
@@ -79,11 +79,27 @@
     <button id="show">显示</button>
     <br />
     <br />
-    <h3> 获得内容 </h3>
+    <h3> 获得HTML内容 </h3>
     <p>名称: <input type="text" id="show-input" value="李梦媛"></p>
-    <button id = "show-input-button">显示值</button>
+    <button id="show-input-button">显示值</button>
     <br />
-
+    <h3> 设置HTML内容 </h3>
+    <div>
+        <p id="test1"> 准备更新文本 </p>
+        <p id="test2">准备更新HTML </p>
+        <p>输入框: <input type="text" id="test3" value="更新值"></p>
+        <button id="btn1">设置文本</button>
+        <button id="btn2">设置 HTML</button>
+        <button id="btn3">设置值</button>
+    </div>
+    <br />
+    <h3> append() —— 追加文本 </h3>
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+    <button id="append-button">添加列表项</button>
 </body>
 
 </html>

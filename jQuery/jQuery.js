@@ -67,3 +67,23 @@ $(document).ready(function(){
       alert("值为: " + $("#show-input").val());
     });
   });  
+
+//设置文本
+$(document).ready(function(){
+    $("#btn1").click(function(){
+      $("#test1").text(" 设置文本成功");
+    });
+    $("#btn2").click(function(){
+      $("#test2").html("<b>设置HTML成功</b>");
+    });
+    $("#btn3").click(function(){
+      $("#test3").val("设置值成功");
+    });
+  });  
+
+//追加文本
+$(document).ready(function(){
+    $("#append-button").click(function(){
+      $("ol").append("<li> 列表已添加 </li>");
+    });
+  });  
