@@ -9,7 +9,7 @@ body {
 
 
 //嵌套,减少重复书写
-
+//#content: id选择器，在HTML中对应到的是id=content的标签中
 #content {
     article {
       h1 { color: #333 }

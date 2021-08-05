@@ -1,0 +1,14 @@
+/* 伪类，  ：hover */
+.button-hover:hover{
+    background-color: blue;
+}
+
+/*  */
+div.menu-bar ul ul {
+    display: none;
+  }
+  
+  div.menu-bar li:hover > ul {
+    display: block;
+  }
+  
