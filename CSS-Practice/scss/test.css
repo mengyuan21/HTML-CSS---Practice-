@@ -1,6 +1,40 @@
+@charset "UTF-8";
 body {
   font: 100% Helvetica, sans-serif;
   color: #333;
+  background-color: #d39595;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 40px;
+}
+
+button#mixin-button {
+  background-color: palegoldenrod;
+  color: #3c0447;
+  border: 2px solid #00aa00;
+  border-radius: 5px;
+}
+
+a#mixin-link {
+  color: blue;
+}
+
+a#mixin-link:hover {
+  color: red;
+}
+
+a#mixin-link:visited {
+  color: green;
+}
+
+.error, .seriousError {
+  border: 1px solid red;
+  background-color: #fdd;
+}
+
+.seriousError {
+  border-width: 3px;
 }
 
 #content article h1 {
@@ -13,4 +47,13 @@ body {
 
 #content aside {
   background-color: #EEE;
+}
+
+/*使用父选择器*/
+article a {
+  color: blue;
+}
+
+article a:hover {
+  color: red;
 }

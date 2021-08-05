@@ -1,15 +1,67 @@
-//变量，可在所有选择器中重复引用
+// 1. 变量，可在所有选择器中重复引用
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
+$bgcolor: rgb(211, 149, 149);
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  background-color: $bgcolor;
+  position:absolute;
+  left: 5%;
+  right: 5%;
+  top: 40px;
+}
+
+// 2. 混合器：@mixin, 避免重复多次书写相同的格式设定，例如，
+// rounded-corners 设定了圆角弧度：
+@mixin rounded-corners {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+button#mixin-button {
+  background-color: palegoldenrod;
+  color: rgb(60, 4, 71);
+  border: 2px solid #00aa00;
+  @include rounded-corners;
+}
+
+//2.1 & 2.2 混合器传参，并设置默认值
+
+@mixin link-colors(
+    $normal,
+    $hover: $normal,
+    $visited: $normal
+  )
+{
+  color: $normal;
+  &:hover { color: $hover; }
+  &:visited { color: $visited; }
+}
+
+a#mixin-link {
+  @include link-colors(blue, red, green);
 }
 
 
-//嵌套,减少重复书写
-//#content: id选择器，在HTML中对应到的是id=content的标签中
+//3. 选择器继承
+// 继承方式： @extend classname...
+
+.error {
+  border: 1px solid red;
+  background-color: #fdd;
+}
+.seriousError {
+  @extend .error;
+  border-width: 3px;
+}
+
+
+// 4. 嵌套,减少重复书写
+// #content: id选择器，在HTML中对应到的是id=content的标签中
+//1. 
 #content {
     article {
       h1 { color: #333 }
@@ -17,3 +69,10 @@ body {
     }
     aside { background-color: #EEE }
   }
+
+//2.
+/*使用父选择器*/
+article a {
+  color: blue;
+  &:hover { color: red }
+}

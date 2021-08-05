@@ -1,6 +1,6 @@
 
 .flexbox-container {
-    height: 1000px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     /* 轴的相对位置 */
@@ -21,15 +21,15 @@
 
 .flexbox-item1 {
     min-height: 100px;
-    /* justify-content: center; */
+    justify-content: center;
     /* 表示无论浏览器大小怎么变动都不改变这个模块的大小 */
-    /* order: 3; */
+    order: 3;
     /* 可以在不改变HTML的情况下调整网页的顺序，不建议使用 */
 }
 
 .flexbox-item2 {
     min-height: 200px;
-    /* order: 1; */
+    order: 1;
     /* justify-content: center; */
 
 }
@@ -37,5 +37,5 @@
 .flexbox-item3 {
     min-height: 300px;
     /* 用于填满剩下的部分 */
-    /* order: 2; */
+    order: 2;
 }
