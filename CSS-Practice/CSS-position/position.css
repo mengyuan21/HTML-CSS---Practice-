@@ -4,7 +4,7 @@
     border: 5px, solid black;
     margin: 20px auto;
     background-color: grey;
-    /* position: relative; */
+    position: relative;
     /* 在parent .box这里的relative会让这个parent里的所有child只能在这里移动 */
 }
 
@@ -33,4 +33,6 @@
 
 .item2{
     background-color: greenyellow;
+    /* position: absolute;
+    top: 10px; */
 }
