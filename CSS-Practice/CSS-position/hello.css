@@ -1,0 +1,23 @@
+
+
+.header {
+    display:table;
+    margin:0 auto;
+    border:1px solid red;
+} 
+
+nav {
+    background-color: darkslategray;
+    color: white;
+    position: sticky;
+    top: 0%;
+    /* text-align: center; */
+}
+
+.text {
+    width: 50%;
+    position:relative;
+    left: 25%;
+    top: 50px;
+    text-align:center;
+}

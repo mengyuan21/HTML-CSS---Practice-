@@ -1,0 +1,36 @@
+.box {
+    width: 400px;
+    height: 400px;
+    border: 5px, solid black;
+    margin: 20px auto;
+    background-color: grey;
+    /* position: relative; */
+    /* 在parent .box这里的relative会让这个parent里的所有child只能在这里移动 */
+}
+
+.item1, .item2 {
+    width: 120px;
+    height: 120px;
+}
+
+.item1{
+    background-color: coral;
+
+    /* 相对parent向右移20px 
+    position: relative;
+    left: 20px; */
+
+    /* 当parent中的位置设定为了relative,此处的absolute将会变成相对parent的绝对位置，例如： */
+    /* position: absolute;
+    bottom: 0px; */
+
+
+    /* fixed: 永远保持在页面固定位置，包括滑动卷轴后 */
+    /* position: fixed;
+    left: 500px;
+    top: 0px; */
+}
+
+.item2{
+    background-color: greenyellow;
+}
