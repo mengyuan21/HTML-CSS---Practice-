@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-
+<!--
+    整体有些乱，不是很明确每一部分都在做什么
+    很多显示隐藏都是针对P标签,导致页面上所有的P标签都被隐藏或显示
+    可读性很差
+-->
 <head>
     <meta charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title> jQuery </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
     </script>
@@ -43,6 +48,9 @@
     <p> 这是一个段落 </p>
     <p> 这是另一个段落 </p>
     <button id="button1"> 点我！ </button>
+    <!--
+    必须要刷新才能进行练习2
+    -->
     <h3> 练习2 ： id选择器 —— 通过jQuery隐藏所有id = test的内容 </h3>
     <p id="test"> 我的id = "test" </p>
     <p> 我的id != "test" </p>

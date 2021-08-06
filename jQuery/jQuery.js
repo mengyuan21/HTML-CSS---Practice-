@@ -1,4 +1,9 @@
-
+/**
+ * ES6和JavaScript是什么关系
+ * ES6引入了箭头函数lambda，可以对当前文件进行refactor
+ * 箭头函数和普通函数的区别
+ * jquery有很多简写方法
+ * **/
 //用户点击button后，所有<p>都隐藏
 $(document).ready(function() {
     $("#button1").click(function() {
@@ -86,4 +91,4 @@ $(document).ready(function(){
     $("#append-button").click(function(){
       $("ol").append("<li> 列表已添加 </li>");
     });
-  });  
+  });
