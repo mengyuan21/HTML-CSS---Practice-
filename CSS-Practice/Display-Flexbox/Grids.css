@@ -3,6 +3,31 @@
     /* 字体名 */
 }
 
+.grid-item:nth-child(odd) {
+    /* 根据当前元素的兄弟元素按照位置顺序排序，括号表达需要匹配到的值
+    想要匹配到奇数也可以写 “2n+1” */
+    background-color: #5bbdfa;
+  }
+  
+  .grid-item::before {
+  /* before创建一个伪元素，将成为匹配选中元素的第一个子元素，
+  通过content属性为一个元素添加修饰性内容 */
+    content: 'Grid Item';
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    top: 10px;
+    left: 15px;
+  }
+  
+  .grid-item::after {
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    right: 15px;
+    font-weight: bold;
+  }
+
 html, body {
   background-color: #333;
   height: 100%;
@@ -31,15 +56,26 @@ html, body {
     /* grid-template-rows: 200px 100px 200px 100px 200px; */
 
     /* 同时设定行，列： */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: repeat(2, 100px); */
     /* 当你不确定自己的行数或列数时： */
-    grid-auto-rows: 150px;
+    /* grid-auto-rows: 150px; */
     /* 同时你只想改变第一行/列的大小时,只需要写下这个值即可： */
-    grid-template-rows: 200px;
+    /* grid-template-rows: 200px; */
+
+    /* 当文字过长时可以在auto中设置minmax的值： */
+    grid-auto-rows: minmax(150px, auto);
+
+    /* 间隔： 行/列都可 */
+    /* grid-row-gap: 20px;
+    grid-column-gap: 10px; */
+    grid-gap: 20px;
 
 
-
+    justify-content: center;
+    /* or stretch */
+    align-content: center;
+    height: 100vh;
 }
 
 
@@ -53,41 +89,31 @@ html, body {
   border: 1px solid white;
 }
 
-.grid-item:nth-child(odd) {
-  /* 根据当前元素的兄弟元素按照位置顺序排序，括号表达需要匹配到的值
-  想要匹配到奇数也可以写 “2n+1” */
-  background-color: #5bbdfa;
-}
-
-.grid-item::before {
-/* before创建一个伪元素，将成为匹配选中元素的第一个子元素，
-通过content属性为一个元素添加修饰性内容 */
-  content: 'Grid Item';
-  position: absolute;
-  font-size: 25px;
-  font-weight: bold;
-  top: 10px;
-  left: 15px;
-}
-
-.grid-item::after {
-  position: absolute;
-  font-size: 25px;
-  top: 10px;
-  right: 15px;
-  font-weight: bold;
-}
 
 .grid-item1 {
-
+    /* 写法1: item1占用1-3的位置（有两列则为1-3， 3列则为1-4，有几条竖线就到几） */ 
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /*写法2: 也可以使用 1， -1，鉴于-1指代最右边的列*/
+    /* grid-column-end: -1; */
+    /* 写法3: 也可以去掉start/end直接写数值： 1 / -1 */
+    /* grid-column: 1 / -1; */
 }
 
 .grid-item2 {
-    
+    /* 如果你想让左边占用3行，那么同理设定row即可*/ 
+    /* grid-row-start: 2;
+    grid-row-end:5; */
+
+    /* 写法2: span n */
+    grid-row: span 3;
 }
 
 .grid-item3 {
-    
+    /* align-self: start;
+    justify-self: start;
+    height: 80px;
+    width: 150px; */
 }
 
 .grid-item4 {
@@ -95,9 +121,5 @@ html, body {
 }
 
 .grid-item5 {
-    
-}
-
-.grid-item6 {
     
 }
