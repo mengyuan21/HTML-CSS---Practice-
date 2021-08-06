@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML practice </title>
+    <br/>
     <h1>This is the Head </h1>
     <h1 title="A Paragraph"> This is a Paragraph with a tooltip(title). </h1>
 </head>
 
 <body>
+    <br/>
+    <br/>
     <h2> 1. How to divide a webpage into logical paragraphs </h2>
     <ul>
         <li>header</li>
@@ -30,7 +34,39 @@
     <br />
     <br />
 
+    <h3> html表格 </h3>
+    <table border="1" style="background-color: rgb(7, 182, 66)" >
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>row 1, cell 1</td>
+            <td>row 1, cell 2</td>
+        </tr>
+        <tr>
+            <td>row 2, cell 1</td>
+            <td>row 2, cell 2</td>
+        </tr>
+    </table>
+    <br />
+    <br />
 
+    <h3> form </h3>
+    <p> HTML <form> 元素表示文档中的一个区域，此区域包含交互控件，用于向 Web 服务器提交信息。例如：输入框，提交按钮等 </p>
+        <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Enter your name: </label>
+              <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-example">
+              <label for="email">Enter your email: </label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-example">
+              <input type="submit" value="Subscribe!">
+            </div>
+          </form>
 
     <h3> · 高级列表：dl（高级列表） / dt（术语） / dd（描述） </h3>
     <dl>
@@ -87,9 +123,15 @@
         <input type="number" name="a" value="10" /> =
         <output name="result"></output>
     </form>
+    <br/>
+    <br/>
 
-
-</body>
+    <h3>· 忽略标签的纯文本输出 </h3>
+    <p> <pre>
+        当你用HTML写网页文本时如果发现文本内的标签内容被HTML识别为标签而非纯文本时就要使用
+        &lt;pre&gt; &lt;/pre&gt;,并且需要被识别为文本的标签的左右尖括号需要替换为& lt 和 & gt(去掉中间空格)</p>
+    </pre>
+        </body>
 
 
 <footer>
