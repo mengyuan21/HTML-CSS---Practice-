@@ -1,7 +1,9 @@
 var contryName = new Array("America", "Greece", "Britain", "Canada", "China")
+// 重构 
 var count = 0;
 
 document.write("在以下字符中：<br/>");
+//map
 for (var i=0; i<contryName.length; i++) 
     document.write(contryName[i] + "<br/>");
 
