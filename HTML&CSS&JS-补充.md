@@ -1,5 +1,3 @@
-
-
 # JS
 
 
@@ -188,6 +186,20 @@ ES6是JavaScript语言的下一代标准，在2015年6月正式发布。它的�
 JavaScript的创造者Netscape公司，决定将JavaScript提交给国际标准化组织ECMA，希望这种语言能够成为国际标准。次年，ECMA发布262号标准文件（ECMA-262）的第一版，规定了浏览器脚本语言的标准，并将这种语言称为ECMAScript，这个版本就是1.0版。
 
 因此，ECMAScript和JavaScript的关系是，前者是后者的规格，后者是前者的一种实现（另外的ECMAScript方言还有Jscript和ActionScript）。日常场合，这两个词是可以互换的。
+
+
+
+
+
+## 3. map / foreach 
+
+reference:  https://www.cnblogs.com/pengshengguang/p/9807831.html
+
+
+
+
+
+##  
 
 
 

@@ -1,13 +1,18 @@
-var contryName = new Array("America", "Greece", "Britain", "Canada", "China")
+ const countryName = ["America", "Greece", "Britain", "Canada", "China"]
 // 重构 
-var count = 0;
+ let number = 0 
 
 document.write("在以下字符中：<br/>");
 //map
-for (var i=0; i<contryName.length; i++) 
-    document.write(contryName[i] + "<br/>");
 
-for (var i =0; i<contryName.length; i++) {
-    if(contryName[i].indexOf("A") != -1 || contryName[i].indexOf("a") != -1)
-        count ++;
-}document.write("<br/>"+"共有" + count + "个包含a / A 。")
+countryName.forEach( country => {
+    document.write(country)
+} )
+document.write('<br/>包含字母A，a的国家有：<br/>')
+
+countryName.forEach( country => {
+    if(country.indexOf("A") != -1 || country.indexOf("a") != -1){
+        document.write(country)
+    }
+})
+
