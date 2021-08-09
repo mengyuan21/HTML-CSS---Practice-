@@ -10,17 +10,24 @@
     <h1>统计以下国家中名称中包含“a”或“A”的个数</h1>
     <script type="text/javascript">
 
-        var contryName = new Array("America", "Greece", "Britain", "Canada", "China")
-        var count = 0;
+        const countryName = ["America", "Greece", "Britain", "Canada", "China"]
+        let number = 0
 
         document.write("在以下字符中：<br/>");
-        for (var i = 0; i < contryName.length; i++)
-            document.write(contryName[i] + "<br/>");
 
-        for (var i = 0; i < contryName.length; i++) {
-            if (contryName[i].indexOf("A") != -1 || contryName[i].indexOf("a") != -1)
-                count++;
-        } document.write("<br/>" + "共有" + count + "个包含a / A 。")
+        countryName.forEach(country => {
+            document.write(country)
+        })
+        document.write('<br/>包含字母A，a的国家有：<br/>')
+
+        countryName.forEach(country => {
+            if (country.indexOf("A") != -1 || country.indexOf("a") != -1) {
+                number++;
+                document.write(country)
+            }
+        })
+        document.write('<br/>共'+number+"个")
+
 
     </script>
 </body>
